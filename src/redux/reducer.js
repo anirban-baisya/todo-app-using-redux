@@ -7,11 +7,12 @@ const initialData= { //because i have to show the items one by one
 }
 
 const reducer =(state=initialData, action) =>{
+
     switch(action.type){
         case "ADD_TODO" :       //user what want to perform
                     const {id, data } = action.payload;   //destructuring from action.js
                 return{
-                    ...state, //geting initialData(previous state)
+                    ...state, //geting initialData(previous state) //...state deap cloaning (cloaning of the  actual state ) 
 
                     list: [  //adding current data in the from of array
                         ...state.list, // holding previous state data(initialData)

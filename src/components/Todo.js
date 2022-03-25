@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTodo, deleteTodo, removeTodo } from '../redux/action';
 
-
+//we use redux to avoid the props driling method
 
 
 function Todo() {
